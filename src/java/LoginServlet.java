@@ -1,3 +1,4 @@
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
+
     private static final long serialVersionUID = 1L;
 
     private String username1;
@@ -26,7 +28,7 @@ public class LoginServlet extends HttpServlet {
         password3 = getServletConfig().getInitParameter("password3");
     }
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         // Get parameters from the request
@@ -34,22 +36,14 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         // Validate the username and password
-        if (validate(username, password)) {
+        if (username == null || password == null) {
+            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Username or password is missing");
+        } else if (validate(username, password)) {
             // Authentication successful, redirect to a welcome page
-            response.sendRedirect("welcome.jsp");
-        } 
-        if (username == null){ 
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Username is missing");
-        } 
-        if (password == null){ 
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Password is missing");
-        }
-        if (username == null && password == null){ 
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Parameters are missing");
-        }
-        else {
+            response.sendRedirect("/AccountDetails.jsp");
+        } else {
             // Authentication failed, handle exception
-            response.sendRedirect("error.jsp");
+            response.sendRedirect("/Error.jsp");
         }
     }
 

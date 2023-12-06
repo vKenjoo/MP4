@@ -12,8 +12,6 @@
         <title>Login</title>
         <style>
             body {
-                margin: 0;
-                padding: 0;
                 box-sizing: border-box;
                 font-family: "Inter", sans-serif;
                 height: 100vh;
@@ -30,7 +28,6 @@
                 background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
                 background-size: 11px 11px;
             }
-
             .screen-1 {
                 background: #f1f7fe;
                 padding: 2em;
@@ -38,10 +35,9 @@
                 flex-direction: column;
                 border-radius: 30px;
                 box-shadow: 0 0 2em #e6e9f9;
-                gap: 2em;
+                gap: 3em;
             }
-
-            .screen-1 .email {
+            .screen-1 .username {
                 background: white;
                 box-shadow: 0 0 2em #e6e9f9;
                 padding: .5em;
@@ -54,20 +50,20 @@
                 padding-left: 3em;
                 padding-right: 3em;
             }
-            .screen-1 .email input {
+            .screen-1 .username input {
                 outline: none;
                 border: none;
                 font-size: 18px;
             }
-            .screen-1 .email input::-moz-placeholder {
+            .screen-1 .username input::-moz-placeholder {
                 color: black;
                 font-size: 0.9em;
             }
-            .screen-1 .email input:-ms-input-placeholder {
+            .screen-1 .username input:-ms-input-placeholder {
                 color: black;
                 font-size: 0.9em;
             }
-            .screen-1 .email input::placeholder {
+            .screen-1 .username input::placeholder {
                 color: black;
                 font-size: 0.9em;
             }
@@ -118,41 +114,41 @@
                 border-radius: 30px;
                 font-weight: 600;
             }
-
             button {
                 cursor: pointer;
             }
-            
             .rectangle {
-            position: fixed;
-            bottom: 100px;
-            right: -550px;
-            padding-left: 100px;
-            width: 2000px;
-            height: 750px;
-            background-color: #DDED88;
-            transform: rotate(-23deg);
-            transform-origin: bottom right;
-            z-index: -1;
+                position: fixed;
+                bottom: 100px;
+                right: -550px;
+                padding-left: 100px;
+                width: 2000px;
+                height: 750px;
+                background-color: #DDED88;
+                transform: rotate(-23deg);
+                transform-origin: bottom right;
+                z-index: -1;
             }
         </style>
     </head>
     <body>
         <div class="rectangle"></div>
+        <form action="/LoginServlet" method="post">
         <div class="screen-1">
-            <div class="email">
-                <label for="email">Email Address</label>
-                <div class="sec-2">
-                    <input type="email" name="email" placeholder="Username@gmail.com">
+                <div class="username">
+                    <label for="username">Username</label>
+                    <div class="sec-2">
+                        <input type="text" name="username" placeholder="Username">
+                    </div>
                 </div>
-            </div>
-            <div class="password">
-                <label for="password">Password</label>
-                <div class="sec-2">
-                    <input class="pas" type="password" name="password" placeholder="············">
+                <div class="password">
+                    <label for="password">Password</label>
+                    <div class="sec-2">
+                        <input class="pas" type="password" name="password" placeholder="············">
+                    </div>
                 </div>
+                <button class="login" type="submit">Login </button>
             </div>
-            <a href="AccDetails.jsp"><button class="login">Login </button></a>
-        </div>
+        </form>
     </body>
 </html>

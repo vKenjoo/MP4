@@ -223,7 +223,7 @@
             }
 
             h1{
-                font-size: 45px;
+                font-size: 35px;
                 font-weight: bold;
                 color: #3A5311;
             }
@@ -235,6 +235,7 @@
             }
             h1, h2{
                 text-align: center;
+                padding: 10px;
             }
 
             .rectangle {
@@ -266,8 +267,8 @@
             }
 
             .card {
-                width: 450px;
-                height: 250px;
+                width: 575px;
+                height: 350px;
                 background-color: #fff;
                 background: linear-gradient(#f8f8f8, #fff);
                 box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
@@ -277,7 +278,7 @@
                 margin: 1.5rem;
             }
 
-            .card h1 {
+            .card h1, .card a {
                 text-align: center;
             }
 
@@ -289,6 +290,7 @@
                 transition: width 0.4s;
                 overflow: hidden;
                 z-index: 2;
+                
             }
 
             .card.green .additional {
@@ -315,12 +317,11 @@
                 top: 10%;
                 right: -2px;
                 height: 80%;
-                border-left: 2px solid rgba(0,0,0,0.025);
             }
 
             .card .additional .user-card .level,
             .card .additional .user-card .points {
-                top: 15%;
+                top: 20%;
                 color: #fff;
                 text-transform: uppercase;
                 font-size: 0.75em;
@@ -332,7 +333,7 @@
             }
 
             .card .additional .user-card .points {
-                top: 85%;
+                top: 80%;
             }
 
             .card .additional .user-card svg {
@@ -340,16 +341,19 @@
             }
 
             .card .additional .more-info {
+                align-content: center;
+                padding-top: 150px;
                 width: 300px;
                 float: left;
                 position: absolute;
-                left: 150px;
+                left: 240px;
                 height: 100%;
+                
             }
 
             .card .additional .more-info h1 {
                 color: #fff;
-                margin-bottom: 0;
+                
             }
 
             .card.green .additional .more-info h1 {
@@ -360,14 +364,31 @@
                 margin: 0 1rem;
                 color: #fff;
                 font-size: 1rem;
+                  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  padding-left: -200px;
             }
 
+            .card.green .additional .more-info h3 {
+                color: #224C36;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 25px;
+            }
+            
             .card.green .additional .coords {
                 color: #325C46;
+                padding-left: 30px;
             }
 
-            .card .additional .coords span + span {
-                float: right;
+            .card .additional .coords h3,
+            .card .additional .coords h4{
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .card .additional .stats {
@@ -414,12 +435,11 @@
                 width: 300px;
                 height: 100%;
                 position: absolute;
-                top: 0;
-                right: 0;
+                top: 75px;
+                right: 75px;
                 z-index: 1;
                 box-sizing: border-box;
-                padding: 1rem;
-                padding-top: 0;
+
             }
 
             .card .general .more {
@@ -524,42 +544,19 @@
                         </svg>
                     </div>
                     <div class="more-info">
-                        <h1>Jane Doe</h1>
+                        <h3><strong><% out.print(getServletContext().getInitParameter("User_Fullname")); %></strong></h3>
                         <div class="coords">
-                            <span>Group Name</span>
-                            <span>Joined January 2019</span>
-                        </div>
-                        <div class="coords">
-                            <span>Position/Role</span>
-                            <span>City, Country</span>
-                        </div>
-                        <div class="stats">
-                            <div>
-                                <div class="title">Awards</div>
-                                <i class="fa fa-trophy"></i>
-                                <div class="value">2</div>
-                            </div>
-                            <div>
-                                <div class="title">Matches</div>
-                                <i class="fa fa-gamepad"></i>
-                                <div class="value">27</div>
-                            </div>
-                            <div>
-                                <div class="title">Pals</div>
-                                <i class="fa fa-group"></i>
-                                <div class="value">123</div>
-                            </div>
-                            <div>
-                                <div class="title">Coffee</div>
-                                <i class="fa fa-coffee"></i>
-                                <div class="value infinity">∞</div>
-                            </div>
+                            <h4><% out.print(getServletContext().getInitParameter("join_Date")); %></h4>
+                            <h4><% out.print(getServletContext().getInitParameter("city_and_capital")); %></h4>
                         </div>
                     </div>
                 </div>
                 <div class="general">
-                    <h1>Jane Doe</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce a volutpat mauris, at molestie lacus. Nam vestibulum sodales odio ut pulvinar.</p>
+                    <h1>Account Details</h1>
+                    <p><strong>Full Name: </strong> <% out.print(getServletContext().getInitParameter("User_Fullname")); %></p>
+                    <p><strong>Email: </strong> <% out.print(getServletContext().getInitParameter("Email")); %></p>
+                    <p><strong>Birth Date: </strong> <% out.print(getServletContext().getInitParameter("Birth_Date")); %></p>
+                    <p><strong>Account Number: </strong> <% out.print(getServletContext().getInitParameter("AccountNum")); %></p>
                     <span class="more">Mouse over the card for more info</span>
                 </div>
             </div>
