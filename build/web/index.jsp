@@ -32,7 +32,7 @@
             .nav__links a,
             .cta,
             .overlay__content a {
-                font-family: "Montserrat", sans-serif;
+                font-family: "Inter", sans-serif;
                 font-weight: 500;
                 color: #000000;
                 text-decoration: none;
@@ -243,7 +243,7 @@
                 bottom: 100px;
                 right: -550px;
                 padding-left: 100px;
-                width: 2000px;
+                width: 3000px;
                 height: 750px;
                 background-color: #DDED88;
                 transform: rotate(-23deg);
@@ -259,7 +259,7 @@
                 background-size: 11px 11px;
             }
             .footer{
-                padding:30px 0px;
+                padding:-2px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
@@ -313,11 +313,11 @@
         </style>
     </head>
     <header>
-        <a class="logo" href="/"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/MP4/index.jsp">Main</a></li>
+                <li><a href="/MP4/AboutUs.jsp">About</a></li>
                 <li><a href="#">Program</a></li>
                 <li><a href="#">Price</a></li>
                 <li><a href="#">Contact</a></li>
