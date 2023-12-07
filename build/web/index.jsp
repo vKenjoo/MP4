@@ -4,6 +4,7 @@
     Author     : blasi
 --%>
 
+<%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -347,10 +348,15 @@
                 <div class="row">
                     <ul>
                         <li>© 2023 VROOM - All rights reserved</li>
-                        <li><a href="#">Contact us</a></li>
-                        <li><a href="#">Our Services</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul>
+                        <% Date date = (Date) getServletContext().getAttribute("date"); %>
+                        <li><strong>Date:</strong> <%= date %></li>
+                        <li><strong>Machine Problem:</strong> <% out.print(getServletContext().getInitParameter("MPNumber")); %></li>
                     </ul>
                 </div>
             </div>

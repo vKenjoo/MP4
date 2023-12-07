@@ -147,7 +147,7 @@
                         <input class="pas" type="password" name="password" placeholder="············">
                     </div>
                 </div>
-                <button class="login" type="submit">Login </button>
+                <button class="login" type="submit">Login</button>
             </div>
         </form>
     </body>
