@@ -1,16 +1,13 @@
-
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="globals.css" />
-
         <style>
-            
-            
+
             * {
                 box-sizing: border-box;
                 margin: 0;
@@ -389,9 +386,12 @@
             .div, .overlap, .rectangle, .frame, .overlap-2, .container, .rectangle-2, .rectangle-3, .overlap-group-wrapper, .group-wrapper, .flexcontainer {
                 width: 100%; /* Use 100% width for responsiveness */
             }
-
-            body, html {
-                height: 100%; /* Remove fixed height */
+            
+            body{
+                display: flex; 
+                flex-direction: column; 
+                justify-content: center;
+                min-height:100vh;
             }
 
             .button-wrapper {
@@ -430,7 +430,6 @@
                 margin: 0;
             }
 
-
             .button-wrapper {
                 position: absolute;
                 top: 80%;
@@ -439,7 +438,6 @@
             }
 
             /* Add this CSS code for the "Back to Marketplace" button styles */
-
             .smaller-button {
                 width: 200px;
                 height: 50px;
@@ -475,7 +473,7 @@
                 top: -100px; /* Adjust the value as needed to move the element up */
                 transform: scale(0.8); /* Scale down by 20% */
             }
-            
+
             header {
                 display: flex;
                 justify-content: space-between;
@@ -527,7 +525,6 @@
             }
 
             /* Mobile Nav */
-
             .menu {
                 display: none;
             }
@@ -573,13 +570,8 @@
                 font-size: 60px;
                 color: #edf0f1;
             }
-
-
-
-
         </style>
     </head>
-    
     <header>
         <a class="logo" href="/"><img src="VROOM.svg" alt="logo"></a>
         <nav>
@@ -594,12 +586,8 @@
         <a class="cta" href="#">Contact</a>
         <p class="menu cta">Menu</p>
     </header>
-
-
     <body>
-        
         <div class="VIEW-LISTING">
-            
             <div class="div">
                 <div class="rectangle"></div>
                 <div class="moveup">
@@ -676,7 +664,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </body>
