@@ -133,7 +133,7 @@
     </head>
     <body>
         <div class="rectangle"></div>
-        <form action="/LoginServlet" method="post">
+        <form action="/MP4/LoginServlet" method="post">
         <div class="screen-1">
                 <div class="username">
                     <label for="username">Username</label>

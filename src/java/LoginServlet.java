@@ -40,10 +40,10 @@ public class LoginServlet extends HttpServlet {
             response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Username or password is missing");
         } else if (validate(username, password)) {
             // Authentication successful, redirect to a welcome page
-            response.sendRedirect("/AccountDetails.jsp");
+            response.sendRedirect("/MP4/AccountDetails.jsp");
         } else {
             // Authentication failed, handle exception
-            response.sendRedirect("/Error.jsp");
+            response.sendRedirect("/MP4/Error.jsp");
         }
     }
 
