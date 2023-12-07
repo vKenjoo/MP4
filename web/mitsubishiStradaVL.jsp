@@ -662,10 +662,7 @@
                                                 <p class="text"><span class="text-wrapper-4"></span></p>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                 </div>
                                 <img
                                     class="png-transparent"
@@ -679,7 +676,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </body>
