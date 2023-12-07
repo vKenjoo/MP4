@@ -194,7 +194,7 @@
             }
 
             .footer{
-                padding: 0px 0px;
+                padding: 0  px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
