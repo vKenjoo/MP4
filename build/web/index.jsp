@@ -32,7 +32,7 @@
             .nav__links a,
             .cta,
             .overlay__content a {
-                font-family: "Montserrat", sans-serif;
+                font-family: "Inter", sans-serif;
                 font-weight: 500;
                 color: #000000;
                 text-decoration: none;
@@ -313,11 +313,11 @@
         </style>
     </head>
     <header>
-        <a class="logo" href="/"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/MP4/index.jsp">Main</a></li>
+                <li><a href="/MP4/AboutUs.jsp">About</a></li>
                 <li><a href="#">Program</a></li>
                 <li><a href="#">Price</a></li>
                 <li><a href="#">Contact</a></li>
