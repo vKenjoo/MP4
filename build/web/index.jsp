@@ -243,7 +243,7 @@
                 bottom: 100px;
                 right: -550px;
                 padding-left: 100px;
-                width: 2000px;
+                width: 3000px;
                 height: 750px;
                 background-color: #DDED88;
                 transform: rotate(-23deg);
@@ -259,7 +259,7 @@
                 background-size: 11px 11px;
             }
             .footer{
-                padding:30px 0px;
+                padding:-2px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
