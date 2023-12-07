@@ -12,6 +12,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Error</title>
         <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            
             body {
                 padding-top: -50px;
                 height: 100vh;
@@ -188,13 +194,13 @@
             }
 
             .footer{
-                padding:30px 0px;
+                padding: 0px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
 
             .footer .row{
-                width:95%;
+                width:100%;
                 margin:1% 0%;
                 padding:0.6% 0%;
                 color: #000;

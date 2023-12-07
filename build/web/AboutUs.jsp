@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 12 6, 23, 11:16:42 AM
+    Document   : AbousUs
+    Created on : 12 7, 23, 11:34:58 PM
     Author     : blasi
 --%>
 
@@ -11,11 +11,34 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+
         <style>
             * {
                 box-sizing: border-box;
                 margin: 0;
                 padding: 0;
+            }
+            
+            body {
+                align-items: center;
+                box-sizing: border-box;
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                opacity: 1;
+                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
+                background-size: 11px 11px;
+            }
+            .rectangle {
+                position: fixed;
+                bottom: 100px;
+                right: -550px;
+                padding-left: 100px;
+                width: 3000px;
+                height: 750px;
+                background-color: #DDED88;
+                transform: rotate(-23deg);
+                transform-origin: bottom right;
+                z-index: -1;
             }
 
             header {
@@ -144,120 +167,94 @@
                 justify-content: center
             }
 
-            img {
-                padding-left: 50px;
-                max-width: 100%;
-                max-height:100%;
-            }
-
-            /* Button */
-            .button-box{
-                padding: 10px;
-                padding-top: -10px;
-                display: flex;
-                justify-content: center;
+            .person {
                 align-items: center;
-
-                .button-1 {
-                    position: relative;
-                    overflow: hidden;
-                    border: 0px solid #18181a;
-                    color: #18181a;
-                    display: inline-block;
-                    font-size: 15px;
-                    line-height: 15px;
-                    padding: 18px 18px 17px;
-                    text-decoration: none;
-                    cursor: pointer;
-                    background: #C5E908;
-                    -webkit-user-select: none;
-                    margin-left: 20px;
-                    margin-right: 20px;
-                    border-radius: 4px;
-                }
-
-                .button-1 span:first-child {
-                    position: relative;
-                    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-                    z-index: 10;
-                }
-
-                .button-1 span:last-child {
-                    color: white;
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-                    z-index: 100;
-                    opacity: 0;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateY(225%) translateX(-50%);
-                    height: 14px;
-                    line-height: 13px;
-                }
-
-                .button-1:after {
-                    content: "";
-                    position: absolute;
-                    bottom: -50%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: black;
-                    transform-origin: bottom center;
-                    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-                    transform: skewY(9.3deg) scaleY(0);
-                    z-index: 50;
-                }
-
-                .button-1:hover:after {
-                    transform-origin: bottom center;
-                    transform: skewY(9.3deg) scaleY(2);
-                }
-
-                .button-1:hover span:last-child {
-                    transform: translateX(-50%) translateY(-100%);
-                    opacity: 1;
-                    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-                }
+                display: flex;
+                flex-direction: column;
+                width: 280px;
             }
-
-            h1{
-                font-size: 45px;
-                font-weight: bold;
-                color: #3A5311;
+            .container {
+                border-radius: 50%;
+                height: 312px;
+                -webkit-tap-highlight-color: transparent;
+                transform: scale(0.48);
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                width: 400px;
             }
-
-            h2{
-                font-size: 35px;
-                color: #3A5311;
-                font-weight: 300;
+            .container:after {
+                content: "";
+                height: 10px;
+                position: absolute;
+                top: 390px;
+                width: 100%;
             }
-            h1, h2{
+            .container:hover {
+                transform: scale(0.54);
+            }
+            .container-inner {
+                clip-path: path(
+                    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+                    );
+                position: relative;
+                transform-origin: 50%;
+                top: -200px;
+            }
+            .circle {
+                background-color: #fee7d3;
+                border-radius: 50%;
+                cursor: pointer;
+                height: 380px;
+                left: 10px;
+                pointer-events: none;
+                position: absolute;
+                top: 210px;
+                width: 380px;
+            }
+            .img {
+                pointer-events: none;
+                position: relative;
+                transform: translateY(20px) scale(1.15);
+                transform-origin: 50% bottom;
+                transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .container:hover .img {
+                transform: translateY(0) scale(1.2);
+            }
+            .img1 {
+                left: -40px;
+                top: 110px;
+                width: 490px;
+            }
+            .img2 {
+                left: -16px;
+                top: 130px;
+                width: 466px;
+            }
+            .img3 {
+                left: -30px;
+                top: 85px;
+                width: 490px;
+            }
+            .divider {
+                background-color: #000;
+                height: 1px;
+                width: 160px;
+            }
+            .name {
+                color: #404245;
+                font-size: 36px;
+                font-weight: 600;
+                margin-top: 16px;
                 text-align: center;
             }
+            .title {
+                color: #6e6e6e;
+                font-family: arial;
+                font-size: 14px;
+                font-style: italic;
+                margin-top: 4px;
+            }
 
-            .rectangle {
-                position: fixed;
-                bottom: 100px;
-                right: -550px;
-                padding-left: 100px;
-                width: 3000px;
-                height: 750px;
-                background-color: #DDED88;
-                transform: rotate(-23deg);
-                transform-origin: bottom right;
-                z-index: -1;
-            }
-            body{
-                box-sizing: border-box;
-                font-family: "Inter", sans-serif;
-                background-color: #ffffff;
-                opacity: 1;
-                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
-                background-size: 11px 11px;
-            }
             .footer{
                 padding:-2px 0px;
                 font-family: 'Play', sans-serif;
@@ -329,18 +326,41 @@
     <body>
         <div class="rectangle"></div>
         <div class="flexbox">
-            <div class="text">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <h2>consectetur adipiscing elit</h2>
-                <h2>sed do eiu smod tempor</h2>
-                <div class='button-box'>
-                    <a href='Login.jsp'><button class="button-1"><span class="text">Login</span><span>click to continue</span></button></a>
-
-                    <a href="AccountDetails.jsp"><button class="button-1"><span class="text">Login as Guest</span><span>click to continue</span></button></a>
-                </div>
+            <div class="AboutUs">
+                <h1></h1>
             </div>
-            <div class="image">
-                <img src="home.png">
+            <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img class="circle" src="">
+                        <img class="img img1" src="Camit.png"/>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Joshua Camit</div>
+                <div class="title">[title]</div>
+            </div>
+            <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img class="circle" src="">
+                        <img class="img img2" src="Custodio.png"/>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Marc Custodio</div>
+                <div class="title">[title]</div>
+            </div>
+            <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img class="circle" src="">
+                        <img class="img img3" src="Viray.png"/>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Josh Viray</div>
+                <div class="title">[title]</div>
             </div>
         </div>
         <footer>
@@ -354,13 +374,12 @@
                 </div>
                 <div class="row">
                     <ul>
-                        <% Date date = (Date) getServletContext().getAttribute("date"); %>
-                        <li><strong>Date:</strong> <%= date %></li>
-                        <li><strong>Machine Problem:</strong> <% out.print(getServletContext().getInitParameter("MPNumber")); %></li>
+                        <% Date date = (Date) getServletContext().getAttribute("date");%>
+                        <li><strong>Date:</strong> <%= date%></li>
+                        <li><strong>Machine Problem:</strong> <% out.print(getServletContext().getInitParameter("MPNumber"));%></li>
                     </ul>
                 </div>
             </div>
         </footer>
     </body>
 </html>
-
