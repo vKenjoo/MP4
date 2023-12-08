@@ -42,8 +42,7 @@ public class LoginServlet extends HttpServlet {
             // Authentication successful, redirect to a welcome page
             response.sendRedirect("/MP4/AccountDetails.jsp");
         } else {
-            // Authentication failed, handle exception
-            response.sendRedirect("/MP4/Errors/NoParameters.jsp");
+            response.sendRedirect("/MP4/Errors/WrongParameters.jsp");
         }
     }
 
@@ -53,5 +52,4 @@ public class LoginServlet extends HttpServlet {
                 || (username2.equals(username) && password2.equals(password))
                 || (username3.equals(username) && password3.equals(password));
     }
-    
 }

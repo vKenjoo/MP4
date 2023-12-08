@@ -308,19 +308,19 @@
             }
         </style>
     </head>
-    <header>
-        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
+<header>
+        <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="/MP4/index.jsp">Main</a></li>
-                <li><a href="/MP4/AboutUs.jsp">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Price</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                <li><a href="/MP4/index.jsp">Program</a></li>
+                <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
             </ul>
         </nav>
-        <a class="cta" href="/MP4/MarketPlace.jsp">Marketplace</a>
-        <p class="menu cta">Menu</p>
+        <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
+        <p class="menu cta">Marketplace</p>
     </header>
     <body>
         <div class="rectangle"></div>
