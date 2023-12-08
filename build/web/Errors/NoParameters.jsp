@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Error</title>
+        <title>Error: No Parameters</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -317,7 +317,7 @@
         </style>
     </head>
     <body>
-        <img src="VROOM.svg" class="logo" width="192">
+        <img src="/MP4/VROOM.svg" class="logo" width="192">
         <div class="browser">
             <div class="controls">
                 <i></i>
@@ -332,8 +332,8 @@
                 <div class="lips"></div>
             </div>
         </div>
-        <h1>Invalid Login Credentials</h1>
-        <p>We're unable to fulfill your request due to the wrong parameters you have inputted.</p>
+        <h1>No Parameters were inputted</h1>
+        <p>We're unable to fulfill your request due to having no input parameters.</p>
         <div class='button-box'>
             <a href='Index.jsp'><button class="button-1"><span class="text">Go back Home</span><span>click to continue</span></button></a>
             <a href="Login.jsp"><button class="button-1"><span class="text">Login again</span><span>click to continue</span></button></a>

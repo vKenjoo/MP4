@@ -37,13 +37,13 @@ public class LoginServlet extends HttpServlet {
 
         // Validate the username and password
         if (username == null || password == null) {
-            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Username or password is missing");
+            response.sendRedirect("/MP4/Errors/NoParameters.jsp");
         } else if (validate(username, password)) {
             // Authentication successful, redirect to a welcome page
-            response.sendRedirect("/MP4/AccountDetails.jsp");
+            response.sendRedirect("/MP4/ErrorsWrongParameters.jsp");
         } else {
             // Authentication failed, handle exception
-            response.sendRedirect("/MP4/Error.jsp");
+            response.sendRedirect("/MP4/Errors/404Error.jsp");
         }
     }
 
