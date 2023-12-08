@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/MP4/Errors/NoParameters.jsp");
         } else if (validate(username, password)) {
             // Authentication successful, redirect to a welcome page
-            response.sendRedirect("/MP4/ErrorsWrongParameters.jsp");
+            response.sendRedirect("/MP4/AccountDetails.jsp");
         } else {
             // Authentication failed, handle exception
             response.sendRedirect("/MP4/Errors/NoParameters.jsp");
