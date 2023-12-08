@@ -383,7 +383,7 @@
                     <p><strong>PRICE:</strong> 2,000 PHP / DAY</p>
                 </div>
                 <div class="buttons">
-                    <button class="proceed-btn">Proceed to Checkout</button>
+                    <button class="proceed-btn" action="/MP4/ShoppingCartServlet">Proceed to Checkout</button>
                     <button class="back-btn">Back to Marketplace</button>
                 </div>
             </div>

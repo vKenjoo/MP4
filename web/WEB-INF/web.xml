@@ -38,6 +38,10 @@
         <servlet-name>Car</servlet-name>
         <servlet-class>Car</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShoppingCarServlet</servlet-name>
+        <servlet-class>ShoppingCarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -90,6 +94,10 @@
     <servlet-mapping>
         <servlet-name>Car</servlet-name>
         <url-pattern>/Car</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShoppingCarServlet</servlet-name>
+        <url-pattern>/ShoppingCarServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
