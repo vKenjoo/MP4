@@ -1,17 +1,10 @@
-<%-- 
-    Document   : index
-    Created on : 12 6, 23, 11:16:42 AM
-    Author     : blasi
---%>
-
 <%@page import="java.util.Date"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <meta charset="utf-8" />
         <style>
+            /*HEADER*/
             * {
                 box-sizing: border-box;
                 margin: 0;
@@ -32,7 +25,7 @@
             .nav__links a,
             .cta,
             .overlay__content a {
-                font-family: "Inter", sans-serif;
+                font-family: "Montserrat", sans-serif;
                 font-weight: 500;
                 color: #000000;
                 text-decoration: none;
@@ -67,8 +60,6 @@
             .cta:hover {
                 background-color: #DDED88;
             }
-
-            /* Mobile Nav */
 
             .menu {
                 display: none;
@@ -137,11 +128,120 @@
                 }
             }
 
+            /*BODY*/
             .flexbox {
-                padding: 100px;
+                padding: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center
+
+
+            }
+
+            .con1{
+                flex-grow: 1;
+                padding: 40px;
+                margin: 5px;
+                text-align: center;
+                height: 500px;
+                flex-basis: 30%;
+            }
+
+            .con2 {
+                flex-grow: 1;
+                border: 2px solid #3A5311;
+                padding: 40px;
+                margin: 5px;
+                text-align: center;
+                height: 500px;
+                flex-basis: 10%;
+                background-color: #e1e1e178;
+                border-radius: 8px;
+            }
+
+            .con2 h2 {
+                font-size: 35px;
+                color: #3A5311;
+                font-weight: 800;
+            }
+
+            .details-info {
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            .details-info p {
+                margin: 10px 0;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .proceed-btn,
+            .back-btn {
+                padding: 15px 30px;
+                margin: 4px;
+                font-size: 18px;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .proceed-btn {
+                background-color: #c0d06e;
+                font-size: 25px
+
+            }
+
+            .back-btn {
+                background-color: gray;
+                font-size: 12px;
+            }
+
+            .proceed-btn:hover
+            {
+                background-color: #02FD17;
+                color: black;
+                transform: scale(1.1);
+            }
+
+            .back-btn:hover {
+                background-color: #DA4828;
+                transform: scale(1.05);
+            }
+
+            .con3 {
+                position: absolute;
+                top: 100px;
+                ;
+                left: 35%;
+                transform: translateX(-50%);
+                width: 500px;
+
+                padding: 40px;
+                margin: 0px;
+                text-align: center;
+                height: 50px;
+
+                font-family: "Roboto-ExtraBold", Helvetica;
+                font-weight: 1000;
+            }
+
+            .con1 img {
+                width: 1500px;
+                height: auto;
+            }
+            .con2 .line {
+                width: 470px;
+                height: 1px;
+                background-color: #3A5311;
+                margin: 10px auto;
             }
 
             img {
@@ -150,92 +250,22 @@
                 max-height:100%;
             }
 
-            /* Button */
-            .button-box{
-                padding: 10px;
-                padding-top: -10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                .button-1 {
-                    position: relative;
-                    overflow: hidden;
-                    border: 0px solid #18181a;
-                    color: #18181a;
-                    display: inline-block;
-                    font-size: 15px;
-                    line-height: 15px;
-                    padding: 18px 18px 17px;
-                    text-decoration: none;
-                    cursor: pointer;
-                    background: #C5E908;
-                    -webkit-user-select: none;
-                    margin-left: 20px;
-                    margin-right: 20px;
-                    border-radius: 4px;
-                }
-
-                .button-1 span:first-child {
-                    position: relative;
-                    transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
-                    z-index: 10;
-                }
-
-                .button-1 span:last-child {
-                    color: white;
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-                    z-index: 100;
-                    opacity: 0;
-                    top: 50%;
-                    left: 50%;
-                    transform: translateY(225%) translateX(-50%);
-                    height: 14px;
-                    line-height: 13px;
-                }
-
-                .button-1:after {
-                    content: "";
-                    position: absolute;
-                    bottom: -50%;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: black;
-                    transform-origin: bottom center;
-                    transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
-                    transform: skewY(9.3deg) scaleY(0);
-                    z-index: 50;
-                }
-
-                .button-1:hover:after {
-                    transform-origin: bottom center;
-                    transform: skewY(9.3deg) scaleY(2);
-                }
-
-                .button-1:hover span:last-child {
-                    transform: translateX(-50%) translateY(-100%);
-                    opacity: 1;
-                    transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-                }
-            }
-
             h1{
                 font-size: 45px;
                 font-weight: bold;
                 color: #3A5311;
             }
 
-            h2{
-                font-size: 35px;
+            .con3 h2 {
+                font-size: 45px;
                 color: #3A5311;
-                font-weight: 300;
+                font-weight: 800;
+                margin: 0;
             }
-            h1, h2{
-                text-align: center;
+
+            .larger-text {
+                font-size: 45px;
+                margin-left: 0;
             }
 
             .rectangle {
@@ -250,6 +280,7 @@
                 transform-origin: bottom right;
                 z-index: -1;
             }
+
             body{
                 box-sizing: border-box;
                 font-family: "Inter", sans-serif;
@@ -258,8 +289,10 @@
                 background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
                 background-size: 11px 11px;
             }
+
+            /*FOOTER*/
             .footer{
-                padding:-2px 0px;
+                padding:30px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
@@ -277,10 +310,6 @@
                 color: #000;
                 transition:0.5s;
             }
-
-            /*.footer .row a:hover{
-                color:#;
-            } */
 
             .footer .row ul{
                 width:100%;
@@ -312,8 +341,10 @@
             }
         </style>
     </head>
+
     <header>
-        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
+
         <nav>
             <ul class="nav__links">
                 <li><a href="/MP4/index.jsp">Main</a></li>
@@ -326,29 +357,52 @@
         <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
         <p class="menu cta">Marketplace</p>
     </header>
-    
+
     <body>
+
         <div class="rectangle"></div>
         <div class="flexbox">
-            <div class="text">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <h2>consectetur adipiscing elit</h2>
-                <h2>sed do eiu smod tempor</h2>
-                <div class='button-box'>
-                    <a href='Login.jsp'><button class="button-1"><span class="text">Login</span><span>click to continue</span></button></a>
 
-                    <a href="AccountDetails.jsp"><button class="button-1"><span class="text">Login as Guest</span><span>click to continue</span></button></a>
+            <div class="con1">
+                <!-- Content for container 1 goes here -->
+                <img src="/MP4/Marketplace/pics/TII.png" alt="Honda Civic">
+
+                <!-- Add your content, images, texts, and buttons for Container 1 here -->
+            </div>
+
+            <div class="con2">
+                <!-- Content for container 2 goes here -->
+                <h2>DETAILS</h2>
+                <div class="line"></div>
+                <!-- Add your content, images, texts, and buttons for Container 2 here -->
+                <div class="details-info">
+                    <p><strong>TYPE:</strong> MPV</p>
+                    <p><strong>DISPLACEMENT:</strong> 2755cc</p>
+                    <p><strong>TRANSMISSION:</strong> Manual</p>
+                    <p><strong>FUEL TYPE:</strong> Diesel</p>
+                    <p><strong>FUEL CAPACITY:</strong> 55 Liters</p>
+                    <p><strong>NUMBER OF SEATS:</strong> 8</p>
+                    <p><strong>PRICE:</strong> 2,500 PHP / DAY</p>
+                </div>
+                <div class="buttons">
+                    <button class="proceed-btn">Proceed to Checkout</button>
+                    <button class="back-btn">Back to Marketplace</button>
                 </div>
             </div>
-            <div class="image">
-                <img src="home.png">
+
+            <div class="con3">
+                <!-- Content for container 3 goes here -->
+                <h2 class="larger-text">TOYOTA INNOVA</h2>
+                <!-- Add your content, images, texts, and buttons for Container 3 here -->
             </div>
+
         </div>
+
         <footer>
             <div class="footer">
                 <div class="row">
                     <ul>
-                        <li>Â© 2023 VROOM - All rights reserved</li>
+                        <li>© 2023 VROOM - All rights reserved</li>
                         <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
                         <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
                     </ul>
@@ -364,4 +418,3 @@
         </footer>
     </body>
 </html>
-

@@ -258,7 +258,7 @@
                 background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
                 background-size: 11px 11px;
             }
-            
+
             .center {
                 position: absolute;
                 top: 50%;
@@ -290,7 +290,7 @@
                 transition: width 0.4s;
                 overflow: hidden;
                 z-index: 2;
-                
+
             }
 
             .card.green .additional {
@@ -348,12 +348,12 @@
                 position: absolute;
                 left: 240px;
                 height: 100%;
-                
+
             }
 
             .card .additional .more-info h1 {
                 color: #fff;
-                
+
             }
 
             .card.green .additional .more-info h1 {
@@ -364,11 +364,11 @@
                 margin: 0 1rem;
                 color: #fff;
                 font-size: 1rem;
-                  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  padding-left: -200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px;
+                padding-left: -200px;
             }
 
             .card.green .additional .more-info h3 {
@@ -378,7 +378,7 @@
                 justify-content: center;
                 font-size: 25px;
             }
-            
+
             .card.green .additional .coords {
                 color: #325C46;
                 padding-left: 30px;
@@ -461,7 +461,7 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#">Contact</a>
+        <a class="cta" href="/MP4/MarketPlace.jsp">Marketplace</a>
         <p class="menu cta">Menu</p>
     </header>
     <body>
@@ -556,7 +556,7 @@
                     <p><strong>Full Name: </strong> <% out.print(getServletContext().getInitParameter("User_Fullname")); %></p>
                     <p><strong>Email: </strong> <% out.print(getServletContext().getInitParameter("Email")); %></p>
                     <p><strong>Birth Date: </strong> <% out.print(getServletContext().getInitParameter("Birth_Date")); %></p>
-                    <p><strong>Account Number: </strong> <% out.print(getServletContext().getInitParameter("AccountNum")); %></p>
+                    <p><strong>Account Number: </strong> <% out.print(getServletContext().getInitParameter("AccountNum"));%></p>
                     <span class="more">Mouse over the card for more info</span>
                 </div>
             </div>

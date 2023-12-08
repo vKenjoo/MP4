@@ -273,14 +273,13 @@
                 bottom: 100px;
                 right: -550px;
                 padding-left: 100px;
-                width: 2000px;
+                width: 3000px;
                 height: 750px;
                 background-color: #DDED88;
                 transform: rotate(-23deg);
                 transform-origin: bottom right;
                 z-index: -1;
             }
-            
             body{
                 box-sizing: border-box;
                 font-family: "Inter", sans-serif;
@@ -343,18 +342,18 @@
     </head>
 
     <header>
-        <a class="logo" href="/"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Price</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/MP4/index.jsp">Main</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                <li><a href="/MP4/index.jsp">Program</a></li>
+                <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#">Contact</a>
-        <p class="menu cta">Menu</p>
+        <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
+        <p class="menu cta">Marketplace</p>
     </header>
 
     <body>
@@ -364,7 +363,7 @@
 
             <div class="con1">
                 <!-- Content for container 1 goes here -->
-                <img src="HC.png" alt="Honda Civic">
+                <img src="/MP4/Marketplace/pics/SS.png" alt="Honda Civic">
 
                 <!-- Add your content, images, texts, and buttons for Container 1 here -->
             </div>
@@ -375,13 +374,13 @@
                 <div class="line"></div>
                 <!-- Add your content, images, texts, and buttons for Container 2 here -->
                 <div class="details-info">
-                    <p><strong>TYPE:</strong> Sedan</p>
-                    <p><strong>DISPLACEMENT:</strong> 1996cc</p>
+                    <p><strong>TYPE:</strong> Hatchback</p>
+                    <p><strong>DISPLACEMENT:</strong> 1197cc</p>
                     <p><strong>TRANSMISSION:</strong> Automatic</p>
                     <p><strong>FUEL TYPE:</strong> Gasoline</p>
-                    <p><strong>FUEL CAPACITY:</strong> 47 Liters</p>
+                    <p><strong>FUEL CAPACITY:</strong> 37 Liters</p>
                     <p><strong>NUMBER OF SEATS:</strong> 5</p>
-                    <p><strong>PRICE:</strong> 2,000 PHP / DAY</p>
+                    <p><strong>PRICE:</strong> 1,800 PHP / DAY</p>
                 </div>
                 <div class="buttons">
                     <button class="proceed-btn">Proceed to Checkout</button>
@@ -391,7 +390,7 @@
 
             <div class="con3">
                 <!-- Content for container 3 goes here -->
-                <h2 class="larger-text">HONDA CIVIC</h2>
+                <h2 class="larger-text">SUZUKI SWIFT</h2>
                 <!-- Add your content, images, texts, and buttons for Container 3 here -->
             </div>
 
@@ -402,8 +401,8 @@
                 <div class="row">
                     <ul>
                         <li>© 2023 VROOM - All rights reserved</li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
+                        <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="row">
@@ -416,5 +415,4 @@
             </div>
         </footer>
     </body>
-
 </html>

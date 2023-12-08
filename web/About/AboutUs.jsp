@@ -1,14 +1,43 @@
+<%-- 
+    Document   : AbousUs
+    Created on : 12 7, 23, 11:34:58 PM
+    Author     : blasi
+--%>
+
 <%@page import="java.util.Date"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
         <style>
-            /*HEADER*/
             * {
                 box-sizing: border-box;
                 margin: 0;
                 padding: 0;
+            }
+            
+            body {
+                align-items: center;
+                box-sizing: border-box;
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                opacity: 1;
+                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
+                background-size: 11px 11px;
+            }
+            .rectangle {
+                position: fixed;
+                bottom: 100px;
+                right: -550px;
+                padding-left: 100px;
+                width: 3000px;
+                height: 750px;
+                background-color: #DDED88;
+                transform: rotate(-23deg);
+                transform-origin: bottom right;
+                z-index: -1;
             }
 
             header {
@@ -25,7 +54,7 @@
             .nav__links a,
             .cta,
             .overlay__content a {
-                font-family: "Montserrat", sans-serif;
+                font-family: "Inter", sans-serif;
                 font-weight: 500;
                 color: #000000;
                 text-decoration: none;
@@ -60,6 +89,8 @@
             .cta:hover {
                 background-color: #DDED88;
             }
+
+            /* Mobile Nav */
 
             .menu {
                 display: none;
@@ -128,171 +159,103 @@
                 }
             }
 
-            /*BODY*/
             .flexbox {
-                padding: 50px;
+                padding: 100px;
                 display: flex;
                 align-items: center;
                 justify-content: center
-
-
             }
 
-            .con1{
-                flex-grow: 1;            
-                padding: 40px; 
-                margin: 5px;
-                text-align: center;
-                height: 500px;
-                flex-basis: 30%;
-            }
-
-            .con2 {
-                flex-grow: 1;
-                border: 2px solid #3A5311;
-                padding: 40px;
-                margin: 5px;
-                text-align: center;
-                height: 500px;
-                flex-basis: 10%; 
-                background-color: #e1e1e178;
-                border-radius: 8px;
-            }
-
-            .con2 h2 {
-                font-size: 35px;
-                color: #3A5311;
-                font-weight: 800; 
-            }
-
-            .details-info {
-                text-align: left;
-                margin-bottom: 20px;
-                font-size: 18px; 
-                line-height: 1.5;
-            }
-
-            .details-info p {
-                margin: 10px 0; 
-            }
-
-            .buttons {
+            .person {
+                align-items: center;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
+                width: 280px;
             }
-
-            .proceed-btn,
-            .back-btn {
-                padding: 15px 30px; 
-                margin: 4px;
-                font-size: 18px;
-                border: none;
-                border-radius: 15px;
-                cursor: pointer;
-                transition: background-color 0.3s ease, transform 0.3s ease; 
+            .container {
+                border-radius: 50%;
+                height: 312px;
+                -webkit-tap-highlight-color: transparent;
+                transform: scale(0.48);
+                transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                width: 400px;
             }
-
-            .proceed-btn {
-                background-color: #c0d06e;
-                font-size: 25px
-
-            }
-
-            .back-btn {
-                background-color: gray; 
-                font-size: 12px; 
-            }
-
-            .proceed-btn:hover
-            {
-                background-color: #02FD17;
-                color: black;
-                transform: scale(1.1); 
-            }
-
-            .back-btn:hover {
-                background-color: #DA4828; 
-                transform: scale(1.05); 
-            }
-
-            .con3 {
+            .container:after {
+                content: "";
+                height: 10px;
                 position: absolute;
-                top: 100px;
-                ;
-                left: 35%;
-                transform: translateX(-50%);
-                width: 500px; 
-
-                padding: 40px; 
-                margin: 0px;
+                top: 390px;
+                width: 100%;
+            }
+            .container:hover {
+                transform: scale(0.54);
+            }
+            .container-inner {
+                clip-path: path(
+                    "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z"
+                    );
+                position: relative;
+                transform-origin: 50%;
+                top: -200px;
+            }
+            .circle {
+                background-color: #fee7d3;
+                border-radius: 50%;
+                cursor: pointer;
+                height: 380px;
+                left: 10px;
+                pointer-events: none;
+                position: absolute;
+                top: 210px;
+                width: 380px;
+            }
+            .img {
+                pointer-events: none;
+                position: relative;
+                transform: translateY(20px) scale(1.15);
+                transform-origin: 50% bottom;
+                transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .container:hover .img {
+                transform: translateY(0) scale(1.2);
+            }
+            .img1 {
+                left: -40px;
+                top: 110px;
+                width: 490px;
+            }
+            .img2 {
+                left: -16px;
+                top: 130px;
+                width: 466px;
+            }
+            .img3 {
+                left: -30px;
+                top: 85px;
+                width: 490px;
+            }
+            .divider {
+                background-color: #000;
+                height: 1px;
+                width: 160px;
+            }
+            .name {
+                color: #404245;
+                font-size: 36px;
+                font-weight: 600;
+                margin-top: 16px;
                 text-align: center;
-                height: 50px;
-
-                font-family: "Roboto-ExtraBold", Helvetica;
-                font-weight: 1000;
+            }
+            .title {
+                color: #6e6e6e;
+                font-family: arial;
+                font-size: 14px;
+                font-style: italic;
+                margin-top: 4px;
             }
 
-            .con1 img {
-                width: 1500px; 
-                height: auto; 
-            }
-            .con2 .line {
-                width: 470px; 
-                height: 1px; 
-                background-color: #3A5311; 
-                margin: 10px auto; 
-            }
-
-            img {
-                padding-left: 50px;
-                max-width: 100%;
-                max-height:100%;
-            }
-
-            h1{
-                font-size: 45px;
-                font-weight: bold;
-                color: #3A5311;
-            }
-
-            .con3 h2 {
-                font-size: 45px; 
-                color: #3A5311;
-                font-weight: 800;
-                margin: 0; 
-            }
-
-            .larger-text {
-                font-size: 45px; 
-                margin-left: 0; 
-            }
-
-            .rectangle {
-                position: fixed;
-                bottom: 100px;
-                right: -550px;
-                padding-left: 100px;
-                width: 2000px;
-                height: 750px;
-                background-color: #DDED88;
-                transform: rotate(-23deg);
-                transform-origin: bottom right;
-                z-index: -1;
-            }
-            
-            body{
-                box-sizing: border-box;
-                font-family: "Inter", sans-serif;
-                background-color: #ffffff;
-                opacity: 1;
-                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
-                background-size: 11px 11px;
-            }
-
-            /*FOOTER*/
             .footer{
-                padding:30px 0px;
+                padding:-2px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
@@ -310,6 +273,10 @@
                 color: #000;
                 transition:0.5s;
             }
+
+            /*.footer .row a:hover{
+                color:#;
+            } */
 
             .footer .row ul{
                 width:100%;
@@ -341,67 +308,65 @@
             }
         </style>
     </head>
-
     <header>
-        <a class="logo" href="/"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
-                <li><a href="#">Main</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/MP4/index.jsp">Main</a></li>
+                <li><a href="/MP4/AboutUs.jsp">About</a></li>
                 <li><a href="#">Program</a></li>
                 <li><a href="#">Price</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#">Contact</a>
+        <a class="cta" href="/MP4/MarketPlace.jsp">Marketplace</a>
         <p class="menu cta">Menu</p>
     </header>
-
     <body>
-
         <div class="rectangle"></div>
         <div class="flexbox">
-
-            <div class="con1">
-                <!-- Content for container 1 goes here -->
-                <img src="SS.png" alt="Honda Civic">
-
-                <!-- Add your content, images, texts, and buttons for Container 1 here -->
+            <div class="AboutUs">
+                <h1></h1>
             </div>
-
-            <div class="con2">
-                <!-- Content for container 2 goes here -->
-                <h2>DETAILS</h2>
-                <div class="line"></div>
-                <!-- Add your content, images, texts, and buttons for Container 2 here -->
-                <div class="details-info">
-                    <p><strong>TYPE:</strong> Hatchback</p>
-                    <p><strong>DISPLACEMENT:</strong> 1197cc</p>
-                    <p><strong>TRANSMISSION:</strong> Automatic</p>
-                    <p><strong>FUEL TYPE:</strong> Gasoline</p>
-                    <p><strong>FUEL CAPACITY:</strong> 37 Liters</p>
-                    <p><strong>NUMBER OF SEATS:</strong> 5</p>
-                    <p><strong>PRICE:</strong> 1,800 PHP / DAY</p>
+            <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img class="circle" src="">
+                        <img class="img img1" src="Camit.png"/>
+                    </div>
                 </div>
-                <div class="buttons">
-                    <button class="proceed-btn">Proceed to Checkout</button>
-                    <button class="back-btn">Back to Marketplace</button>
+                <div class="divider"></div>
+                <div class="name">Joshua Camit</div>
+                <div class="title">[title]</div>
+            </div>
+            <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img class="circle" src="">
+                        <img class="img img2" src="Custodio.png"/>
+                    </div>
                 </div>
+                <div class="divider"></div>
+                <div class="name">Marc Custodio</div>
+                <div class="title">[title]</div>
             </div>
-
-            <div class="con3">
-                <!-- Content for container 3 goes here -->
-                <h2 class="larger-text">SUZUKI SWIFT</h2>
-                <!-- Add your content, images, texts, and buttons for Container 3 here -->
+            <div class="person">
+                <div class="container">
+                    <div class="container-inner">
+                        <img class="circle" src="">
+                        <img class="img img3" src="Viray.png"/>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="name">Josh Viray</div>
+                <div class="title">[title]</div>
             </div>
-
         </div>
-
         <footer>
             <div class="footer">
                 <div class="row">
                     <ul>
-                        <li>© 2023 VROOM - All rights reserved</li>
+                        <li>Â© 2023 VROOM - All rights reserved</li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Terms & Conditions</a></li>
                     </ul>
@@ -416,5 +381,4 @@
             </div>
         </footer>
     </body>
-
 </html>

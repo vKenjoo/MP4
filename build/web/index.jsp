@@ -317,15 +317,16 @@
         <nav>
             <ul class="nav__links">
                 <li><a href="/MP4/index.jsp">Main</a></li>
-                <li><a href="/MP4/AboutUs.jsp">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Price</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                <li><a href="/MP4/index.jsp">Program</a></li>
+                <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#">Contact</a>
-        <p class="menu cta">Menu</p>
+        <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
+        <p class="menu cta">Marketplace</p>
     </header>
+    
     <body>
         <div class="rectangle"></div>
         <div class="flexbox">
@@ -348,15 +349,15 @@
                 <div class="row">
                     <ul>
                         <li>© 2023 VROOM - All rights reserved</li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
+                        <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="row">
                     <ul>
-                        <% Date date = (Date) getServletContext().getAttribute("date"); %>
-                        <li><strong>Date:</strong> <%= date %></li>
-                        <li><strong>Machine Problem:</strong> <% out.print(getServletContext().getInitParameter("MPNumber")); %></li>
+                        <% Date date = (Date) getServletContext().getAttribute("date");%>
+                        <li><strong>Date:</strong> <%= date%></li>
+                        <li><strong>Machine Problem:</strong> <% out.print(getServletContext().getInitParameter("MPNumber"));%></li>
                     </ul>
                 </div>
             </div>

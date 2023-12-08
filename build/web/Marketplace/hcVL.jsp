@@ -1,13 +1,8 @@
-<%@ page import="java.util.Date" %>
-<%@ page contentType="text/html; charset=UTF-8" %>
+<%@page import="java.util.Date"%>
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Car Rental Marketplace</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-              integrity="sha512-6+0l3Xn5O9dYb7PZ3Rfs/rMG6o3a5DiOW5P00lg+dmgi4aTgks9BYf4qgr4iK5u0zbe2b2bDSbsB9Dbytx7+hQ=="
-              crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="utf-8" />
         <style>
             /*HEADER*/
             * {
@@ -30,7 +25,7 @@
             .nav__links a,
             .cta,
             .overlay__content a {
-                font-family: "Inter", sans-serif;
+                font-family: "Montserrat", sans-serif;
                 font-weight: 500;
                 color: #000000;
                 text-decoration: none;
@@ -135,13 +130,143 @@
 
             /*BODY*/
             .flexbox {
-                padding: 100px;
+                padding: 50px;
                 display: flex;
                 align-items: center;
                 justify-content: center
+
+
             }
 
+            .con1{
+                flex-grow: 1;
+                padding: 40px;
+                margin: 5px;
+                text-align: center;
+                height: 500px;
+                flex-basis: 30%;
+            }
 
+            .con2 {
+                flex-grow: 1;
+                border: 2px solid #3A5311;
+                padding: 40px;
+                margin: 5px;
+                text-align: center;
+                height: 500px;
+                flex-basis: 10%;
+                background-color: #e1e1e178;
+                border-radius: 8px;
+            }
+
+            .con2 h2 {
+                font-size: 35px;
+                color: #3A5311;
+                font-weight: 800;
+            }
+
+            .details-info {
+                text-align: left;
+                margin-bottom: 20px;
+                font-size: 18px;
+                line-height: 1.5;
+            }
+
+            .details-info p {
+                margin: 10px 0;
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .proceed-btn,
+            .back-btn {
+                padding: 15px 30px;
+                margin: 4px;
+                font-size: 18px;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .proceed-btn {
+                background-color: #c0d06e;
+                font-size: 25px
+
+            }
+
+            .back-btn {
+                background-color: gray;
+                font-size: 12px;
+            }
+
+            .proceed-btn:hover
+            {
+                background-color: #02FD17;
+                color: black;
+                transform: scale(1.1);
+            }
+
+            .back-btn:hover {
+                background-color: #DA4828;
+                transform: scale(1.05);
+            }
+
+            .con3 {
+                position: absolute;
+                top: 100px;
+                ;
+                left: 35%;
+                transform: translateX(-50%);
+                width: 500px;
+
+                padding: 40px;
+                margin: 0px;
+                text-align: center;
+                height: 50px;
+
+                font-family: "Roboto-ExtraBold", Helvetica;
+                font-weight: 1000;
+            }
+
+            .con1 img {
+                width: 1500px;
+                height: auto;
+            }
+            .con2 .line {
+                width: 470px;
+                height: 1px;
+                background-color: #3A5311;
+                margin: 10px auto;
+            }
+
+            img {
+                padding-left: 50px;
+                max-width: 100%;
+                max-height:100%;
+            }
+
+            h1{
+                font-size: 45px;
+                font-weight: bold;
+                color: #3A5311;
+            }
+
+            .con3 h2 {
+                font-size: 45px;
+                color: #3A5311;
+                font-weight: 800;
+                margin: 0;
+            }
+
+            .larger-text {
+                font-size: 45px;
+                margin-left: 0;
+            }
 
             .rectangle {
                 position: fixed;
@@ -155,6 +280,7 @@
                 transform-origin: bottom right;
                 z-index: -1;
             }
+
             body{
                 box-sizing: border-box;
                 font-family: "Inter", sans-serif;
@@ -166,7 +292,7 @@
 
             /*FOOTER*/
             .footer{
-                padding:-2px 0px;
+                padding:30px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
@@ -184,7 +310,6 @@
                 color: #000;
                 transition:0.5s;
             }
-
 
             .footer .row ul{
                 width:100%;
@@ -214,132 +339,67 @@
                     margin:0% 3%;
                 }
             }
-
-            /*CAR*/
-            .car-container {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-around;
-                margin-top: 50px;
-            }
-
-            .car-card {
-                width: 300px;
-                margin: 20px;
-                padding: 20px;
-                border: 1px solid #ddd;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                text-align: center;
-                background-color: #fff;
-                transition: transform 0.3s ease-in-out;
-                border-color: #AEF359;
-            }
-
-            .car-card:hover {
-                transform: scale(1.05);
-            }
-
-            .car-image {
-                max-width: 100%;
-                height: 200px;
-                border-radius: 8px;
-            }
-
-            .car-description {
-                margin-top: 15px;
-                font-size: 16px;
-                color: #555;
-            }
-
-            .view-button {
-                margin-top: 15px;
-                padding: 10px 20px;
-                background-color: #DDED88;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease 0s;
-            }
-
-            .view-button:hover {
-                background-color: #DDED88;
-            }
-
-            .cars-for-rent {
-                text-align: center;
-                font-size: 75px;
-                ;
-                font-weight: 900;
-                margin-top: 30px;
-                color: #DDED88;
-                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-            }
-
         </style>
     </head>
+
     <header>
-        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="/MP4/index.jsp">Main</a></li>
-                <li><a href="/MP4/AboutUs.jsp">About</a></li>
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Price</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                <li><a href="/MP4/index.jsp">Program</a></li>
+                <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
             </ul>
         </nav>
-        <a class="cta" href="#">Contact</a>
-        <p class="menu cta">Menu</p>
+        <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
+        <p class="menu cta">Marketplace</p>
     </header>
+
     <body>
 
-        <h1 class="cars-for-rent">CARS FOR RENT</h1>
-        <div class="car-container">
-            <!-- Honda Civic -->
-            <div class="car-card">
-                <img class="car-image" src="HC.png" alt="Honda Civic">
-                <h2>Honda Civic</h2>
-                <p class="car-description">A stylish and reliable sedan, perfect for your daily commute.</p>
-                <button class="view-button">View</button>
+        <div class="rectangle"></div>
+        <div class="flexbox">
+
+            <div class="con1">
+                <!-- Content for container 1 goes here -->
+                <img src="/MP4/Marketplace/pics/HC.png" alt="Honda Civic">
+                <!-- Add your content, images, texts, and buttons for Container 1 here -->
             </div>
 
-            <!-- Toyota Innova -->
-            <div class="car-card">
-                <img class="car-image" src="TII.png" alt="Toyota Innova">
-                <h2>Toyota Innova</h2>
-                <p class="car-description">A spacious and comfortable SUV, great for family trips.</p>
-                <button class="view-button">View</button>
+            <div class="con2">
+                <!-- Content for container 2 goes here -->
+                <h2>DETAILS</h2>
+                <div class="line"></div>
+                <!-- Add your content, images, texts, and buttons for Container 2 here -->
+                <div class="details-info">
+                    <p><strong>TYPE:</strong> Sedan</p>
+                    <p><strong>DISPLACEMENT:</strong> 1996cc</p>
+                    <p><strong>TRANSMISSION:</strong> Automatic</p>
+                    <p><strong>FUEL TYPE:</strong> Gasoline</p>
+                    <p><strong>FUEL CAPACITY:</strong> 47 Liters</p>
+                    <p><strong>NUMBER OF SEATS:</strong> 5</p>
+                    <p><strong>PRICE:</strong> 2,000 PHP / DAY</p>
+                </div>
+                <div class="buttons">
+                    <button class="proceed-btn">Proceed to Checkout</button>
+                    <button class="back-btn">Back to Marketplace</button>
+                </div>
             </div>
-
-            <!-- Mitsubishi Strada -->
-            <div class="car-card">
-                <img class="car-image" src="MSS.png" alt="Mitsubishi Strada">
-                <h2>Mitsubishi Strada</h2>
-                <p class="car-description">A rugged and powerful pickup truck, ideal for off-road.</p>
-                <button class="view-button">View</button>
-            </div>
-
-            <!-- Suzuki Swift -->
-            <div class="car-card">
-                <img class="car-image" src="SS.png" alt="Suzuki Swift">
-                <h2>Suzuki Swift</h2>
-                <p class="car-description">An elegant, compact, and fuel-efficient hatchback.</p>
-                <button class="view-button">View</button>
+            <div class="con3">
+                <!-- Content for container 3 goes here -->
+                <h2 class="larger-text">HONDA CIVIC</h2>
+                <!-- Add your content, images, texts, and buttons for Container 3 here -->
             </div>
         </div>
-        <div class="rectangle"></div>
-        <!--<div class="flexbox">
-        </div>-->
-
-
         <footer>
             <div class="footer">
                 <div class="row">
                     <ul>
-                        <li>Â© 2023 VROOM - All rights reserved</li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li>© 2023 VROOM - All rights reserved</li>
+                        <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
+                        <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="row">
@@ -353,4 +413,3 @@
         </footer>
     </body>
 </html>
-

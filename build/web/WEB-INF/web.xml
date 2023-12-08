@@ -4,7 +4,6 @@
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>LoginServlet</servlet-class>
-        
         <init-param>
             <param-name>username1</param-name>
             <param-value>user1</param-value>
@@ -13,7 +12,6 @@
             <param-name>password1</param-name>
             <param-value>pass1</param-value>
         </init-param>
-        
         <init-param>
             <param-name>username2</param-name>
             <param-value>user2</param-value>
@@ -22,7 +20,6 @@
             <param-name>password2</param-name>
             <param-value>pass2</param-value>
         </init-param>
-        
         <init-param>
             <param-name>username3</param-name>
             <param-value>user3</param-value>
@@ -31,25 +28,28 @@
             <param-name>password3</param-name>
             <param-value>pass3</param-value>
         </init-param>
-        
     </servlet>
     <!--Servlet Mapping -->
+    <servlet>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <servlet-class>CheckoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Car</servlet-name>
+        <servlet-class>Car</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
     </servlet-mapping>
-    
     <servlet>
         <servlet-name>ServletContextListener</servlet-name>
         <servlet-class>ServletContextListener</servlet-class>
     </servlet>
-    
-    
     <servlet>
         <servlet-name>AuthenticationException</servlet-name>
         <servlet-class>AuthenticationException</servlet-class>
     </servlet>
-
     <!--Account Details-->
     <context-param>
         <param-name>User_Fullname</param-name>
@@ -67,27 +67,30 @@
         <param-name>AccountNum</param-name>
         <param-value>#3452391</param-value>
     </context-param>
-    
     <context-param>
         <param-name>join_Date</param-name>
         <param-value>Joined January 2019</param-value>
     </context-param>
-    
     <context-param>
         <param-name>city_and_capital</param-name>
         <param-value>Quezon City, Metro Manila</param-value>
     </context-param>
-    
     <context-param>
         <param-name>MPNumber</param-name>
         <param-value>4</param-value>
     </context-param>
-    
-    <!--Servlet Listeners-->    
+    <!--Servlet Listeners-->
     <listener>
         <listener-class>MyContextListener</listener-class>
     </listener>
-    
+    <servlet-mapping>
+        <servlet-name>CheckoutServlet</servlet-name>
+        <url-pattern>/CheckoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Car</servlet-name>
+        <url-pattern>/Car</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
