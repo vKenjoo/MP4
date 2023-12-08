@@ -141,8 +141,6 @@
                 justify-content: center
             }
 
-
-
             .rectangle {
                 position: fixed;
                 bottom: 100px;
@@ -184,7 +182,6 @@
                 color: #000;
                 transition:0.5s;
             }
-
 
             .footer .row ul{
                 width:100%;
