@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/2608/MP4/nbproject/build-impl.xml</file>
+            <file>file:/C:/2608/MP4/web/AccountDetails.jsp</file>
+            <file>file:/C:/2608/MP4/web/index.jsp</file>
+            <file>file:/C:/2608/MP4/web/Cancellation.jsp</file>
+            <file>file:/C:/2608/MP4/web/Marketplace/hcVL.jsp</file>
+            <file>file:/C:/2608/MP4/web/Transactions/CompletedTransactions.jsp</file>
             <file>file:/C:/2608/MP4/src/java/LoginServlet.java</file>
             <file>file:/C:/2608/MP4/src/java/MyContextListener.java</file>
-            <file>file:/C:/2608/MP4/web/Confirmation/Confirm.jsp</file>
         </group>
     </open-files>
 </project-private>
