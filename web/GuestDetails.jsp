@@ -1,7 +1,7 @@
 <%-- 
-   Document   : PrivacyPolicy
-   Created on : 12 8, 23, 5:33:42 PM
-   Author     : blasi
+    Document   : AccDetails
+    Created on : 12 5, 23, 3:12:58 PM
+    Author     : blasi
 --%>
 
 <%@page import="java.util.Date"%>
@@ -9,9 +9,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Privacy Policy</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Account Details</title>
         <style>
             * {
                 box-sizing: border-box;
@@ -146,7 +145,7 @@
                 background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
                 background-size: 11px 11px;
             }
-            
+
             h1{
                 font-size: 45px;
                 font-weight: bold;
@@ -158,7 +157,7 @@
                 color: #3A5311;
                 font-weight: 700;
             }
-            
+
             p, ul{
                 font-size: 15px;
                 color: #3A5311;
@@ -169,6 +168,7 @@
             }
 
             section {
+                padding-top: 100px;
                 background-color: #fff;
                 color: #333;
                 padding: 20px;
@@ -187,59 +187,14 @@
                 text-align: left; /* Align specific text to the left if needed */
             }
 
-            .footer{
-                padding:-2px 0px;
-                font-family: 'Play', sans-serif;
-                text-align:center;
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 10px;
             }
-
-            .footer .row{
-                width:100%;
-                margin:1% 0%;
-                padding:0.6% 0%;
-                color: #000;
-                font-size:0.9em;
-            }
-
-            .footer .row a{
-                text-decoration:none;
-                color: #000;
-                transition:0.5s;
-            }
-
-            /*.footer .row a:hover{
-                color:#;
-            } */
-
-            .footer .row ul{
-                width:100%;
-            }
-
-            .footer .row ul li{
-                display:inline-block;
-                margin:0px 30px;
-            }
-
-            .footer .row a i{
-                font-size:2em;
-                margin:0% 1%;
-            }
-
-            @media (max-width:720px){
-                .footer{
-                    text-align:left;
-                    padding:5%;
-                }
-                .footer .row ul li{
-                    display:block;
-                    margin:10px 0px;
-                    text-align:left;
-                }
-                .footer .row a i{
-                    margin:0% 3%;
-                }
-            }
-        </style>   
+        </style>  
     </head>
     <header>
         <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
@@ -256,80 +211,16 @@
         <p class="menu cta">Marketplace</p>
     </header>
     <body>
-        <section>
-            <h1>Privacy Policy</h1>
-            <p>This Privacy Policy describes how we collect, use, and disclose your personal information when you use our VROOM.</p>
+        <section class="center">
+            <h2>Hello, Guest!</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor 
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </section>
-        <section>
-            <h2>Information We Collect</h2>
-            <p>We may collect the following types of information:</p>
-            <ul>
-                <li><strong>Personal Information:</strong> Name, email address, phone number, etc.</li>
-                <li><strong>Non-Personal Information:</strong> Browser type, device type, IP address, etc.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>How We Use Your Information</h2>
-            <p>We may use your information for various purposes, including:</p>
-            <ul>
-                <li>Providing and maintaining our services</li>
-                <li>Improving our website</li>
-                <li>Responding to your inquiries</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Disclosure of Your Information</h2>
-            <p>We may share your personal information in the following situations:</p>
-            <ul>
-                <li>With your consent</li>
-                <li>For legal reasons</li>
-                <li>With service providers</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Cookies and Tracking Technologies</h2>
-            <p>We use cookies and similar tracking technologies to analyze trends, administer the website, and track users' movements around the site.</p>
-        </section>
-
-        <section>
-            <h2>Your Choices</h2>
-            <p>You can control cookies through your browser settings. You may also opt-out of certain data collection and use.</p>
-        </section>
-
-        <section>
-            <h2>Security</h2>
-            <p>We take reasonable steps to protect your personal information; however, no method of transmission over the internet or electronic storage is 100% secure.</p>
-        </section>
-
-        <section>
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
-        </section>
-
-        <section>
-            <h2>Contact Us</h2>
-            <p>If you have any questions or concerns about our Privacy Policy, please contact us at [Your Contact Information].</p>
-            <p>Last updated: December 12, 2023</p>
-        </section>
-        <footer>
-            <div class="footer">
-                <div class="row">
-                    <ul>
-                        <li>© 2023 VROOM - All rights reserved</li>
-                        <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
-                        <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
-                    </ul>
-                </div>
-                <div class="row">
-                    <ul>
-                        <% Date date = (Date) getServletContext().getAttribute("date");%>
-                        <li><strong>Date:</strong> <%= date%></li>
-                        <li><strong>Machine Problem:</strong> <% out.print(getServletContext().getInitParameter("MPNumber"));%></li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
-    </body>
+        <div class="gap"></div>
+    </body> 
 </html>

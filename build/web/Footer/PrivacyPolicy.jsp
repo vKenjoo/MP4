@@ -260,7 +260,6 @@
             <h1>Privacy Policy</h1>
             <p>This Privacy Policy describes how we collect, use, and disclose your personal information when you use our VROOM.</p>
         </section>
-
         <section>
             <h2>Information We Collect</h2>
             <p>We may collect the following types of information:</p>
@@ -269,7 +268,6 @@
                 <li><strong>Non-Personal Information:</strong> Browser type, device type, IP address, etc.</li>
             </ul>
         </section>
-
         <section>
             <h2>How We Use Your Information</h2>
             <p>We may use your information for various purposes, including:</p>

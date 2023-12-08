@@ -129,26 +129,35 @@
                 transform-origin: bottom right;
                 z-index: -1;
             }
+
+            img{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
         </style>
     </head>
     <body>
         <div class="rectangle"></div>
-        <form action="/MP4/LoginServlet" method="post">
-        <div class="screen-1">
-                <div class="username">
-                    <label for="username">Username</label>
-                    <div class="sec-2">
-                        <input type="text" name="username" placeholder="Username">
+        <div class="flex"> <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
+            <form action="/MP4/LoginServlet" method="post">
+                <div class="screen-1">
+                    <div class="username">
+                        <label for="username">Username</label>
+                        <div class="sec-2">
+                            <input type="text" name="username" placeholder="Username">
+                        </div>
                     </div>
-                </div>
-                <div class="password">
-                    <label for="password">Password</label>
-                    <div class="sec-2">
-                        <input class="pas" type="password" name="password" placeholder="············">
+                    <div class="password">
+                        <label for="password">Password</label>
+                        <div class="sec-2">
+                            <input class="pas" type="password" name="password" placeholder="············">
+                        </div>
                     </div>
+                    <button class="login" type="submit">Login</button>
                 </div>
-                <button class="login" type="submit">Login</button>
-            </div>
-        </form>
+            </form>
+        </div>
     </body>
 </html>

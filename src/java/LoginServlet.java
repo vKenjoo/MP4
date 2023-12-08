@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/MP4/ErrorsWrongParameters.jsp");
         } else {
             // Authentication failed, handle exception
-            response.sendRedirect("/MP4/Errors/404Error.jsp");
+            response.sendRedirect("/MP4/Errors/NoParameters.jsp");
         }
     }
 

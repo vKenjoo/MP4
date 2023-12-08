@@ -335,17 +335,16 @@
         <h1>Invalid Login Credentials</h1>
         <p>We're unable to fulfill your request due to the wrong parameters you have inputted.</p>
         <div class='button-box'>
-            <a href='Index.jsp'><button class="button-1"><span class="text">Go back Home</span><span>click to continue</span></button></a>
-            <a href="Login.jsp"><button class="button-1"><span class="text">Login again</span><span>click to continue</span></button></a>
+            <a href="/MP4/index.jsp"><button class="button-1"><span class="text">Go back Home</span><span>click to continue</span></button></a>
+            <a href="/MP4/Login.jsp"><button class="button-1"><span class="text">Login again</span><span>click to continue</span></button></a>
         </div>
-
         <footer>
             <div class="footer">
                 <div class="row">
                     <ul>
                         <li>© 2023 VROOM - All rights reserved</li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
+                        <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 <div class="row">

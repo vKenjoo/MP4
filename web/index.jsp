@@ -337,7 +337,7 @@
                 <div class='button-box'>
                     <a href='Login.jsp'><button class="button-1"><span class="text">Login</span><span>click to continue</span></button></a>
 
-                    <a href="AccountDetails.jsp"><button class="button-1"><span class="text">Login as Guest</span><span>click to continue</span></button></a>
+                    <a href="GuestDetails.jsp"><button class="button-1"><span class="text">Login as Guest</span><span>click to continue</span></button></a>
                 </div>
             </div>
             <div class="image">
