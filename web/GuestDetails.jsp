@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Account Details</title>
+        <title>Guest Account Login</title>
         <style>
             * {
                 box-sizing: border-box;
