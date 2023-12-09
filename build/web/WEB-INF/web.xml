@@ -110,7 +110,7 @@
     </servlet-mapping>
     <error-page>
         <error-code>404</error-code>
-        <location>/MP4/Errors/404Error.jsp</location>
+        <location>/404Error.jsp</location>
     </error-page>
     <session-config>
         <session-timeout>
