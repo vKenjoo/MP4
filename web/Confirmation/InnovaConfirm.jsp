@@ -309,17 +309,13 @@
                         the booking is subject to our cancellation and refund policy</p> 
                 </div>
                 <div class="button-container">
-                    <a href="#" class="button">
-                        CONFIRM CHECKOUT
-                    </a>
+                    <a href="/MP4/Transactions/CurrentTransactions.jsp" class="button">CONFIRM CHECKOUT</a>
                 </div>
-                <a href="#" class="bottom">
-                    BACK
-                </a>
+                <a href="/MP4/Marketplace/tiVL.jsp" class="bottom">BACK</a>
             </div>
         </div>
         <div class="image-container">
-            <img src="TI.png" alt="TI">
+            <img src="/MP4/Marketplace/pics/TI.png" alt="Honda Civic">
         </div>
         <footer>
             <div class="footer">

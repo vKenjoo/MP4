@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@page import="java.util.Date"%>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -75,7 +75,6 @@
             .ongoing-trans {
                 display: flex;
                 align-items: center; /* Align items vertically in the center */
-                margin-top: 75px;
                 margin-left: 17px;
             }
 
@@ -191,22 +190,72 @@
                 border: none;
                 border-radius: 20px;
             }
-            a:hover {
-                background-color: #D22B2B;
+            
+            .footer{
+                padding:-2px 0px;
+                font-family: 'Play', sans-serif;
+                text-align:center;
+            }
+
+            .footer .row{
+                width:100%;
+                margin:1% 0%;
+                padding:0.6% 0%;
+                color: #000;
+                font-size:0.9em;
+            }
+
+            .footer .row a{
+                text-decoration:none;
+                color: #000;
+                transition:0.5s;
+            }
+
+            /*.footer .row a:hover{
+                color:#;
+            } */
+
+            .footer .row ul{
+                width:100%;
+            }
+
+            .footer .row ul li{
+                display:inline-block;
+                margin:0px 30px;
+            }
+
+            .footer .row a i{
+                font-size:2em;
+                margin:0% 1%;
+            }
+
+            @media (max-width:720px){
+                .footer{
+                    text-align:left;
+                    padding:5%;
+                }
+                .footer .row ul li{
+                    display:block;
+                    margin:10px 0px;
+                    text-align:left;
+                }
+                .footer .row a i{
+                    margin:0% 3%;
+                }
             }
         </style>
-        
+
     </head>
     <body>
         <header>
-            <a class="logo" href="/"><img src="VROOM.svg" alt="logo"></a>
+            <a class="logo" href="/"><img src="/MP4/VROOM.svg" alt="logo"></a>
             <nav>
                 <ul class="nav__links">
-                    <li><a href="#">Main</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Program</a></li>
-                    <li><a href="#">Price</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="/MP4/index.jsp">Main</a></li>
+                    <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                    <li><a href="/MP4/index.jsp">Program</a></li>
+                    <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                    <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
                 </ul>
             </nav>
             <a class="cta" href="#">Contact</a>
@@ -224,6 +273,7 @@
                     <p> TYPE: <b>Sedan</b></p> <!--JAVA CODE -->
                     <p> TRANSMISSION: <b>Automatic</b></p>  
                     <p> PICK-UP/DROP-OFF DATE: <b>19 Dec - 21 Dec</b></p> 
+                    <p> PICK-UP/DROP-OFF TIME: <b>11:00 AM / 1:00PM</b></p> 
                     <p> PICK-UP/DROP-OFF LOCATION: <b>University of Santo Tomas, Manila</b></p> 
                     <p> PAYMENT METHOD: <b>CASH</b></p> 
                 </div>

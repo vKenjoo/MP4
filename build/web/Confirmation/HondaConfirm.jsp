@@ -1,5 +1,5 @@
 <%@page import="java.util.Date"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -130,7 +130,7 @@
             .civic {
                 position: absolute;
                 top: 150px;
-                left: 165px;
+                left: 225px;
             }
 
             .civic p {
@@ -138,7 +138,7 @@
                 letter-spacing: 1.3px;
                 font-style: italic;
                 font-weight: 800;
-                font-size: 47px;
+                font-size: 53px;
                 font-family: "inter", sans-serif;
             }
             .desc {
@@ -187,8 +187,8 @@
 
             .image-container {
                 position: absolute;
-                top: 380px;
-                left: 1000px;
+                top: 320px;
+                left: 960px;
                 overflow: hidden;
                 z-index:1;
             }
@@ -223,8 +223,10 @@
                 font-size: 73px;
                 font-family: "inter", sans-serif;
             }
+
+            /*FOOTER*/
             .footer{
-                padding:-2px 0px;
+                padding:30px 0px;
                 font-family: 'Play', sans-serif;
                 text-align:center;
             }
@@ -242,10 +244,6 @@
                 color: #000;
                 transition:0.5s;
             }
-
-            /*.footer .row a:hover{
-                color:#;
-            } */
 
             .footer .row ul{
                 width:100%;
@@ -280,7 +278,7 @@
     </head>
     <body>
         <header>
-            <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
+            <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
             <nav>
                 <ul class="nav__links">
                     <li><a href="/MP4/index.jsp">Main</a></li>
@@ -301,7 +299,7 @@
         <div class="main">
             <div class="box-container">
                 <div class="headline"><p>CONFIRM RENTAL</p> </div>
-                <div class="civic"><p>MITSUBISHI STRADA</p></div>
+                <div class="civic"><p>HONDA CIVIC</p></div>
                 <div class="desc">
                     <p>Please double-check the rental dates, location, and other details before confirming. 
                         If you have any changes or special requests, ensure they are accurate before proceeding.Once confirmed, 
@@ -310,17 +308,17 @@
                 <div class="button-container">
                     <a href="/MP4/Transactions/CurrentTransactions.jsp" class="button">CONFIRM CHECKOUT</a>
                 </div>
-                <a href="/MP4/Marketplace/msVL.jsp" class="bottom">BACK</a>
+                <a href="/MP4/Marketplace/hcVL.jsp" class="bottom">BACK</a>
             </div>
         </div>
         <div class="image-container">
-            <img src="/MP4/Marketplace/pics/MS.png" alt="Honda Civic">
+            <img src="/MP4/Marketplace/pics/HC.png" alt="Honda Civic">
         </div>
         <footer>
             <div class="footer">
                 <div class="row">
                     <ul>
-                        <li>Â© 2023 VROOM - All rights reserved</li>
+                        <li>© 2023 VROOM - All rights reserved</li>
                         <li><a href="/MP4/Footer/PrivacyPolicy.jsp">Privacy Policy</a></li>
                         <li><a href="/MP4/Footer/TandC.jsp">Terms & Conditions</a></li>
                     </ul>

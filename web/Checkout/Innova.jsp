@@ -262,8 +262,6 @@
                 box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             }
 
-
-
             .RF button {
                 display: block;
                 margin: 0 auto;
@@ -297,16 +295,8 @@
             .RF input[type="number"]::placeholder {
                 color: #B1B6B1;
             }
-
-            /* Rest of your existing styles */
-
-
-
-
-
         </style>
     </head>
-
     <header>
         <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
         <nav>
@@ -321,24 +311,12 @@
         <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
         <p class="menu cta">Marketplace</p>
     </header>
-
-
-
-
-
-
-
-
-
-
-
     <body>
-
         <div class="rectangle"></div>
         <div class="flexbox">
             <div class="RF">
                 <h2 class="reserve">Reservation Form</h2>
-                <form id="reservationForm" action="ShoppingCartServlet.jsp" method="post">
+                <div id="reservationForm">
                     <h3>Pickup Date & Time of Pickup</h3>
                     <input type="date" id="pickupDate" name="pickupDate" required>
                     <input type="time" id="pickupTime" name="pickupTime" min="08:00" max="20:00" required><br>
@@ -368,11 +346,11 @@
 
                     <div class="pad"></div>
 
-                    <button type="submit" onclick="return validateDates()"><strong>Submit</strong></button>
+                    <a href="/MP4/Confirmation/HondaConfirm.jsp"><button type="submit" onclick="return validateDates()"><strong>Submit</strong></button></a>
 
                     <script>
                         function validateDates() {
-                            var pickupMonth = document.getElementById('pickupMonth').value;
+                            var pickupMonth = document.getElementById('pickupMonth').value; 
                             var pickupDay = document.getElementById('pickupDay').value;
                             var pickupYear = document.getElementById('pickupYear').value;
 
@@ -398,35 +376,9 @@
                                     );
                         }
                     </script>
-                </form>
+                </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         <footer>
             <div class="footer">
                 <div class="row">
@@ -445,14 +397,5 @@
                 </div>
             </div>
         </footer>
-
-
-
-
-
-
-
-
-
     </body>
 </html>
