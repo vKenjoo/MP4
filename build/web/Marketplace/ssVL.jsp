@@ -355,24 +355,15 @@
         <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
         <p class="menu cta">Marketplace</p>
     </header>
-
     <body>
-
         <div class="rectangle"></div>
         <div class="flexbox">
-
             <div class="con1">
-                <!-- Content for container 1 goes here -->
                 <img src="/MP4/Marketplace/pics/SS.png" alt="Honda Civic">
-
-                <!-- Add your content, images, texts, and buttons for Container 1 here -->
             </div>
-
             <div class="con2">
-                <!-- Content for container 2 goes here -->
                 <h2>DETAILS</h2>
                 <div class="line"></div>
-                <!-- Add your content, images, texts, and buttons for Container 2 here -->
                 <div class="details-info">
                     <p><strong>TYPE:</strong> Hatchback</p>
                     <p><strong>DISPLACEMENT:</strong> 1197cc</p>
@@ -383,8 +374,8 @@
                     <p><strong>PRICE:</strong> 1,800 PHP / DAY</p>
                 </div>
                 <div class="buttons">
-                    <button class="proceed-btn">Proceed to Checkout</button>
-                    <button class="back-btn">Back to Marketplace</button>
+                    <a href="/MP4/Checkout/Suzuki.jsp"><button class="proceed-btn">Proceed to Checkout</button></a>
+                    <a href="/MP4/Marketplace/MarketPlace.jsp"><button class="back-btn">Back to Marketplace</button></a>
                 </div>
             </div>
 
