@@ -1,3 +1,8 @@
+<%-- 
+    Document   : CompletedTransactions
+    Created on : 12 8, 23, 3:32:29 AM
+    Author     : marcc
+--%>
 <%@page import="java.util.Date"%>
 <html>
     <head>
@@ -117,7 +122,12 @@
                 position: fixed;
             }
             body {
-                overflow: hidden; /* Prevent scrolling */
+                overflow: hidden;
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                opacity: 1;
+                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
+                background-size: 11px 11px;
             }
             .civic {
                 position: absolute;
@@ -248,18 +258,19 @@
     </head>
     <body>
         <header>
-            <a class="logo" href="/"><img src="/MP4/VROOM.svg" alt="logo"></a>
-            <nav>
-                <ul class="nav__links">
-                    <li><a href="/MP4/index.jsp">Main</a></li>
-                    <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
-                    <li><a href="/MP4/index.jsp">Program</a></li>
-                    <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
-                    <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
-                </ul>
-            </nav>
-            <a class="cta" href="#">Contact</a>
-        </header>
+        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/MP4/index.jsp">Main</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                <li><a href="/MP4/index.jsp">Program</a></li>
+                <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
+        <p class="menu cta">Marketplace</p>
+    </header>
         <div class="rectangle"> </div>
         <div class="ongoing-trans">
             <p>ONGOING TRANSACTION</p>

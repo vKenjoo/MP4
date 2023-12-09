@@ -126,6 +126,11 @@
 
             body {
                 overflow: hidden;
+                font-family: "Inter", sans-serif;
+                background-color: #ffffff;
+                opacity: 1;
+                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
+                background-size: 11px 11px;
             }
 
             .civic {
