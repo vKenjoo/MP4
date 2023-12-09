@@ -258,7 +258,7 @@
     </head>
     <body>
         <header>
-        <a class="logo" href="/MP4/index.jsp"><img src="VROOM.svg" alt="logo"></a>
+        <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
         <nav>
             <ul class="nav__links">
                 <li><a href="/MP4/index.jsp">Main</a></li>
@@ -292,9 +292,7 @@
                         Nam eget mattis velit, suscipit dapibus lorem. Aliquam erat volutpat. Nam egestas pharetra elit, vel iaculis leo sodales id.</p></div>
 
                 <div class="button-container">
-                    <a href="#" class="button">
-                        CANCEL RENTAL
-                    </a>
+                    <a href="/MP4/Transactions/Cancellation.jsp" class="button">CANCEL RENTAL</a>
                 </div>
             </div>
         </div>

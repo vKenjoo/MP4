@@ -36,10 +36,9 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
 
         // Validate the username and password
-        if (username == null || password == null) {
+        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
             response.sendRedirect("/MP4/Errors/NoParameters.jsp");
         } else if (validate(username, password)) {
-            // Authentication successful, redirect to a welcome page
             response.sendRedirect("/MP4/AccountDetails.jsp");
         } else {
             response.sendRedirect("/MP4/Errors/WrongParameters.jsp");

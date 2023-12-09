@@ -297,7 +297,6 @@
                 </ul>
             </nav>
             <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
-            <p class="menu cta">Marketplace</p>
         </header>
         <div class="rectangle"></div>
         <div class="ongoing-trans">

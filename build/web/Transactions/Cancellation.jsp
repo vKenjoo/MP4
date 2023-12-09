@@ -1,9 +1,4 @@
-<%-- 
-    Document   : CompletedTransactions
-    Created on : 12 8, 23, 3:32:29 AM
-    Author     : marcc
---%>
-<%@page import="java.util.Date"%>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -122,53 +117,26 @@
                 position: fixed;
             }
             body {
-                overflow: hidden;
-                font-family: "Inter", sans-serif;
-                background-color: #ffffff;
-                opacity: 1;
-                background-image: radial-gradient(#6f986b 0.55px, #ffffff 0.55px);
-                background-size: 11px 11px;
+                overflow: hidden; /* Prevent scrolling */
             }
-            .civic {
+            .headline {
                 position: absolute;
-                top: 52px;
-                left: 45px;
+                top: 42px;
+                left: 15px;
+                margin-left: 100px;
+                margin-right: 100px;
             }
-            .civic p {
-                color: #4f4f4f;
-                letter-spacing: 1.3px;
-                font-style: italic;
-                font-weight: 800;
-                font-size: 46px;
-                font-family: "inter", sans-serif;
-            }
-            .details {
-                position: absolute;
-                top: 135px;
-                left: 49px;
-            }
-            .details p {
+            .headline p {
                 color: black;
-                text-decoration: underline solid black 1.5px;
-                text-underline-offset: 0.35em;
+                letter-spacing: 0.5px;
+                text-align: center;
                 font-weight: 800;
-                font-size: 15px;
-                font-family: "inter", sans-serif;
-            }
-            .info {
-                position: absolute;
-                top: 170px;
-                left: 49px;
-            }
-            .info p {
-                color: black;
-                line-height: 2.5;
-                font-size: 15px;
+                font-size: 55px;
                 font-family: "inter", sans-serif;
             }
             .desc {
                 position: absolute;
-                top: 380px;
+                top: 300px;
                 left: 40px;
                 margin-right:100px;
                 margin-left: 60px;
@@ -177,13 +145,13 @@
                 color: black;
                 text-align: center;
                 line-height: 2;
-                font-size: 15px;
+                font-size: 16px;
                 font-family: "inter", sans-serif;
             }
             .button-container{
                 position: absolute;
-                top: 490px;
-                left: 245px;
+                top: 470px;
+                left: 420px;
 
             }
             .button {
@@ -200,99 +168,63 @@
                 border: none;
                 border-radius: 20px;
             }
-            
-            .footer{
-                padding:-2px 0px;
-                font-family: 'Play', sans-serif;
-                text-align:center;
+            a:hover {
+                background-color: #D22B2B;
             }
+            .button-container2{
+                position: absolute;
+                top: 470px;
+                right: 400px;
 
-            .footer .row{
-                width:100%;
-                margin:1% 0%;
-                padding:0.6% 0%;
-                color: #000;
-                font-size:0.9em;
             }
-
-            .footer .row a{
-                text-decoration:none;
-                color: #000;
-                transition:0.5s;
+            .button2 {
+                border: 1px solid black;
+                display: inline-block;
+                background-color: white;
+                color: black;
+                padding: 13.5px 30px; /* Increased padding for a larger button */
+                text-align: center;
+                text-decoration: none;
+                font-size: 20px;
+                color:black;
+                font-family: "inter", sans-serif;
+                cursor: pointer;
+                border-radius: 20px;
             }
-
-            /*.footer .row a:hover{
-                color:#;
-            } */
-
-            .footer .row ul{
-                width:100%;
-            }
-
-            .footer .row ul li{
-                display:inline-block;
-                margin:0px 30px;
-            }
-
-            .footer .row a i{
-                font-size:2em;
-                margin:0% 1%;
-            }
-
-            @media (max-width:720px){
-                .footer{
-                    text-align:left;
-                    padding:5%;
-                }
-                .footer .row ul li{
-                    display:block;
-                    margin:10px 0px;
-                    text-align:left;
-                }
-                .footer .row a i{
-                    margin:0% 3%;
-                }
+            .button2:hover {
+                background-color: #50C878;
             }
         </style>
-
     </head>
     <body>
         <header>
-        <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
-        <nav>
-            <ul class="nav__links">
-                <li><a href="/MP4/index.jsp">Main</a></li>
-                <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
-                <li><a href="/MP4/index.jsp">Program</a></li>
-                <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
-                <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
-            </ul>
-        </nav>
-        <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
-        <p class="menu cta">Marketplace</p>
-    </header>
+            <a class="logo" href="/MP4/index.jsp"><img src="/MP4/VROOM.svg" alt="logo"></a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="/MP4/index.jsp">Main</a></li>
+                    <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
+                    <li><a href="/MP4/index.jsp">Program</a></li>
+                    <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
+                    <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="/MP4/Marketplace/MarketPlace.jsp">Marketplace</a>
+        </header>
         <div class="rectangle"> </div>
         <div class="ongoing-trans">
-            <p>ONGOING TRANSACTION</p>
+            <p>CANCELLATION</p>
             <hr class="custom-line">
         </div>
         <div class="main">
             <div class="box-container">
-                <div class="civic"><p>HONDA CIVIC</p> </div>
-                <div class="details"> <p>DETAILS</p> </div>
-                <div class="info">
-                    <p> TYPE: <b>Sedan</b></p> <!--JAVA CODE -->
-                    <p> TRANSMISSION: <b>Automatic</b></p>  
-                    <p> PICK-UP/DROP-OFF DATE: <b>19 Dec - 21 Dec</b></p> 
-                    <p> PICK-UP/DROP-OFF TIME: <b>11:00 AM / 1:00PM</b></p> 
-                    <p> PICK-UP/DROP-OFF LOCATION: <b>University of Santo Tomas, Manila</b></p> 
-                    <p> PAYMENT METHOD: <b>CASH</b></p> 
-                </div>
-                <div class ="desc"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                        Nam eget mattis velit, suscipit dapibus lorem. Aliquam erat volutpat. Nam egestas pharetra elit, vel iaculis leo sodales id.</p></div>
-
+                <div class="headline"><p>ARE YOU SURE YOU WANT TO CANCEL?</p> </div>
+                <div class ="desc"><p>We noticed that you're attempting to cancel your rental with us. Before you proceed, we want to ensure that this is the action you wish to take. Canceling your rental 
+                        means that the reserved item or service will no longer be available for you on the specified dates.</p></div>
                 <div class="button-container">
-                    <a href="/MP4/Transactions/Cancellation.jsp" class="button">CANCEL RENTAL</a>
+                    <a href="#" class="button">CANCEL RENTAL</a>
+                </div>
+                <div class="button-container2">
+                    <a href="/MP4/Transactions/CurrentTransactions.jsp" class="button2">CONTINUE TRANSACTION</a>
                 </div>
             </div>
         </div>
