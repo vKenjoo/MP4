@@ -331,9 +331,9 @@
         <div class="rectangle"></div>
         <div class="flexbox">
             <div class="text">
-                <h1>Lorem ipsum dolor sit amet</h1>
-                <h2>consectetur adipiscing elit</h2>
-                <h2>sed do eiu smod tempor</h2>
+                <h1>Welcome to VROOM!</h1>
+                <h2>The portal to hassle-free</h2>
+                <h2>car rental in your fingertips!</h2>
                 <div class='button-box'>
                     <a href='Login.jsp'><button class="button-1"><span class="text">Login</span><span>click to continue</span></button></a>
 

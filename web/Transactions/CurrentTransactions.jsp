@@ -263,7 +263,7 @@
             <ul class="nav__links">
                 <li><a href="/MP4/index.jsp">Main</a></li>
                 <li><a href="/MP4/About/AboutUs.jsp">About</a></li>
-                <li><a href="/MP4/index.jsp">Program</a></li>
+                <li><a href="/MP4/Transactions/CompletedTransactions.jsp">Transactions</a></li>
                 <li><a href="/MP4/AccountDetails.jsp">Profile</a></li>
                 <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
             </ul>
@@ -289,7 +289,6 @@
                 </div>
                 <div class ="desc"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
                         Nam eget mattis velit, suscipit dapibus lorem. Aliquam erat volutpat. Nam egestas pharetra elit, vel iaculis leo sodales id.</p></div>
-
                 <div class="button-container">
                     <a href="/MP4/Transactions/Cancellation.jsp" class="button">CANCEL RENTAL</a>
                 </div>

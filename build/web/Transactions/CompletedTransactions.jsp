@@ -257,7 +257,7 @@
                         <li><a href="/MP4/About/AboutUs.jsp">Contact</a></li>
                     </ul>
                 </nav>
-                <a class="cta" href="#">Contact</a>
+                <a class="cta" href="#">Marketplace</a>
             </header>
             <div class="rectangle"></div>
             <div class="ongoing-trans">

@@ -337,7 +337,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="name">Joshua Camit</div>
-                <div class="title">[title]</div>
+                <div class="title">Front-End Developer</div>
             </div>
             <div class="person">
                 <div class="container">
@@ -348,7 +348,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="name">Marc Custodio</div>
-                <div class="title">[title]</div>
+                <div class="title">Front-End Developer</div>
             </div>
             <div class="person">
                 <div class="container">
@@ -359,7 +359,7 @@
                 </div>
                 <div class="divider"></div>
                 <div class="name">Josh Viray</div>
-                <div class="title">[title]</div>
+                <div class="title">Team Leader / Back-End Developer</div>
             </div>
         </div>
         <footer>
